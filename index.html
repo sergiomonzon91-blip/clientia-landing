@@ -1,0 +1,579 @@
+<!doctype html>
+<html lang="es-AR" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ClientIA · Consultora y agencia de inteligencia comercial</title>
+  <meta name="description" content="Decisiones comerciales basadas en tus clientes, no en supuestos. Investigamos como consultora, ejecutamos como agencia y potenciamos todo con marketing e inteligencia artificial. Pedí tu diagnóstico inicial.">
+  <meta name="theme-color" content="#070F2A">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+  <link rel="apple-touch-icon" href="assets/favicon-180.png">
+
+  <link rel="alternate" hreflang="es" href="?lang=es">
+  <link rel="alternate" hreflang="pt-BR" href="?lang=pt">
+  <link rel="alternate" hreflang="en" href="?lang=en">
+  <link rel="alternate" hreflang="x-default" href="./">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="ClientIA · Decisiones que nacen de tus clientes">
+  <meta property="og:description" content="Consultora y agencia de inteligencia comercial. Pedí tu diagnóstico inicial.">
+  <meta property="og:image" content="assets/favicon-512.png">
+  <meta property="og:locale" content="es_AR">
+  <meta property="og:locale:alternate" content="pt_BR">
+  <meta property="og:locale:alternate" content="en_US">
+
+  <!-- Idioma: se decide antes de pintar para evitar el parpadeo del texto en español -->
+  <script>
+    (function () {
+      var l;
+      try { l = new URLSearchParams(location.search).get("lang") || localStorage.getItem("clientia-lang"); } catch (e) {}
+      if (!l) { var n = (navigator.language || "es").slice(0, 2).toLowerCase(); l = n === "pt" || n === "en" ? n : "es"; }
+      if (l !== "pt" && l !== "en") l = "es";
+      window.__CLIENTIA_LANG = l;
+      if (l !== "es") {
+        var d = document.documentElement;
+        d.setAttribute("data-i18n-pending", "");
+        d.lang = l === "pt" ? "pt-BR" : "en";
+        setTimeout(function () { d.removeAttribute("data-i18n-pending"); }, 1500);
+      }
+    })();
+  </script>
+  <style>html[data-i18n-pending] body { visibility: hidden; }</style>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="assets/logo-horizontal.webp">
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Google Analytics 4: reemplazar G-XXXXXXX y descomentar
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-XXXXXXX');</script>
+  -->
+  <!-- Píxel de Meta: pegar aquí el código del píxel -->
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "ClientIA",
+    "description": "Consultora y agencia de inteligencia comercial.",
+    "slogan": "Decisiones que nacen de tus clientes",
+    "areaServed": "AR",
+    "availableLanguage": ["es", "pt-BR", "en"],
+    "address": { "@type": "PostalAddress", "addressRegion": "Misiones", "addressCountry": "AR" }
+  }
+  </script>
+</head>
+<body>
+  <a class="skip" href="#contenido" data-i18n="skip">Saltar al contenido</a>
+
+  <!-- ============ HEADER ============ -->
+  <header class="header" id="top">
+    <div class="container header__inner">
+      <a href="#top" class="header__logo" aria-label="ClientIA, volver al inicio" data-i18n-attr="aria-label:logo.aria">
+        <img src="assets/logo-horizontal.webp" alt="ClientIA — Decisiones que nacen de tus clientes" data-i18n-attr="alt:logo.alt" width="1551" height="419">
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Principal" data-i18n-attr="aria-label:nav.aria">
+        <a href="#quienes-somos" data-i18n="nav.about">Quiénes somos</a>
+        <a href="#servicios" data-i18n="nav.services">Servicios</a>
+        <a href="#como-trabajamos" data-i18n="nav.process">Cómo trabajamos</a>
+        <a href="#por-que-elegirnos" data-i18n="nav.why">Por qué elegirnos</a>
+        <div class="nav__lang" role="group" aria-label="Idioma" data-i18n-attr="aria-label:lang.label">
+          <button type="button" class="js-lang" data-lang="es" lang="es">ES</button>
+          <button type="button" class="js-lang" data-lang="pt" lang="pt-BR">PT</button>
+          <button type="button" class="js-lang" data-lang="en" lang="en">EN</button>
+        </div>
+      </nav>
+
+      <div class="header__actions">
+        <div class="lang" id="lang">
+          <button type="button" class="lang__btn" id="lang-btn" aria-haspopup="true" aria-expanded="false" aria-controls="lang-menu" aria-label="Idioma" data-i18n-attr="aria-label:lang.label">
+            <svg class="i" aria-hidden="true"><use href="#i-globe"/></svg>
+            <span class="lang__cur" id="lang-cur">ES</span>
+            <svg class="i lang__chev" aria-hidden="true"><use href="#i-chevron"/></svg>
+          </button>
+          <ul class="lang__menu" id="lang-menu" role="menu" hidden>
+            <li role="none"><button type="button" role="menuitemradio" class="js-lang" data-lang="es" lang="es">Español</button></li>
+            <li role="none"><button type="button" role="menuitemradio" class="js-lang" data-lang="pt" lang="pt-BR">Português</button></li>
+            <li role="none"><button type="button" role="menuitemradio" class="js-lang" data-lang="en" lang="en">English</button></li>
+          </ul>
+        </div>
+        <a href="#contacto" class="btn btn--primary btn--sm" data-track="cta_header">
+          <span class="hide-xs" data-i18n="cta.main">Quiero mi diagnóstico inicial</span><span class="show-xs" data-i18n="cta.short">Mi diagnóstico</span>
+        </a>
+        <button class="burger" id="burger" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="contenido">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero dark">
+      <div class="hero__glow" aria-hidden="true"></div>
+      <div class="container hero__grid">
+        <div class="hero__copy reveal">
+          <p class="eyebrow" data-i18n="hero.eyebrow">Consultora y agencia de inteligencia comercial</p>
+          <h1 data-i18n="hero.title">Decisiones comerciales basadas en tus clientes, <span class="accent">no en supuestos.</span></h1>
+          <p class="hero__lead" data-i18n="hero.lead">Investigamos como consultora, ejecutamos como agencia y potenciamos todo con estrategias de marketing e inteligencia artificial.</p>
+          <p class="hero__support" data-i18n="hero.support">Combinamos el rigor de las ciencias económicas con estrategias de marketing e inteligencia artificial para que conozcas a fondo tu mercado y hagas crecer tu negocio con datos reales. También capacitamos a tu equipo en inteligencia comercial para que lo haga por sí mismo.</p>
+          <div class="btn-row">
+            <a href="#contacto" class="btn btn--primary" data-track="cta_hero" data-i18n="cta.main">Quiero mi diagnóstico inicial</a>
+            <a href="#" class="btn btn--ghost js-wa" data-track="whatsapp_hero">
+              <svg class="i" aria-hidden="true"><use href="#i-whatsapp"/></svg> <span data-i18n="cta.wa">Hablar por WhatsApp</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero__visual reveal" aria-hidden="true">
+          <div class="dash">
+            <div class="dash__top">
+              <img src="assets/isotipo.webp" alt="" width="411" height="419" class="dash__mark">
+              <div>
+                <p class="dash__label" data-i18n="dash.label">Panel de inteligencia comercial</p>
+                <p class="dash__title" data-i18n="dash.title">Tus clientes, en datos</p>
+              </div>
+            </div>
+            <div class="dash__kpis">
+              <div class="kpi"><span class="kpi__n">+38%</span><span class="kpi__t" data-i18n="dash.kpi1">Satisfacción</span></div>
+              <div class="kpi"><span class="kpi__n">4</span><span class="kpi__t" data-i18n="dash.kpi2">Segmentos</span></div>
+              <div class="kpi"><span class="kpi__n">-21%</span><span class="kpi__t" data-i18n="dash.kpi3">Abandono</span></div>
+            </div>
+            <svg class="dash__chart" viewBox="0 0 320 120" preserveAspectRatio="none">
+              <defs>
+                <linearGradient id="g-area" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0" stop-color="#22D3CF" stop-opacity=".35"/>
+                  <stop offset="1" stop-color="#22D3CF" stop-opacity="0"/>
+                </linearGradient>
+              </defs>
+              <g class="dash__bars">
+                <rect x="14"  y="70" width="22" height="50" rx="4"/>
+                <rect x="58"  y="58" width="22" height="62" rx="4"/>
+                <rect x="102" y="64" width="22" height="56" rx="4"/>
+                <rect x="146" y="44" width="22" height="76" rx="4"/>
+                <rect x="190" y="36" width="22" height="84" rx="4"/>
+                <rect x="234" y="24" width="22" height="96" rx="4"/>
+                <rect x="278" y="12" width="22" height="108" rx="4"/>
+              </g>
+              <path d="M25 62 L69 52 L113 56 L157 36 L201 28 L245 18 L289 6 L289 120 L25 120 Z" fill="url(#g-area)"/>
+              <path class="dash__line" d="M25 62 L69 52 L113 56 L157 36 L201 28 L245 18 L289 6" fill="none" stroke="#22D3CF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="289" cy="6" r="4" fill="#22D3CF"/>
+            </svg>
+            <div class="dash__chip"><span class="dot"></span> <span data-i18n="dash.chip">Recomendación lista para accionar</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ EL PROBLEMA ============ -->
+    <section class="section">
+      <div class="container">
+        <header class="section__head center reveal">
+          <h2 data-i18n="prob.title">¿Te suena familiar?</h2>
+        </header>
+        <div class="grid grid--3">
+          <article class="card card--problem reveal">
+            <svg class="i i--lg" aria-hidden="true"><use href="#i-question"/></svg>
+            <p data-i18n="prob.1">Vendés, pero no sabés por qué te eligen ni por qué se van.</p>
+          </article>
+          <article class="card card--problem reveal">
+            <svg class="i i--lg" aria-hidden="true"><use href="#i-target"/></svg>
+            <p data-i18n="prob.2">Invertís en publicidad sin saber si llega a las personas correctas.</p>
+          </article>
+          <article class="card card--problem reveal">
+            <svg class="i i--lg" aria-hidden="true"><use href="#i-compass"/></svg>
+            <p data-i18n="prob.3">Decidís por intuición porque no tenés datos confiables de tu mercado.</p>
+          </article>
+        </div>
+        <p class="closing reveal" data-i18n="prob.closing">En <strong>Client<span class="accent-text">IA</span></strong> reemplazamos las suposiciones por evidencia.</p>
+      </div>
+    </section>
+
+    <!-- ============ QUIÉNES SOMOS ============ -->
+    <section class="section soft" id="quienes-somos">
+      <div class="container">
+        <div class="about">
+          <div class="about__copy reveal">
+            <h2 data-i18n="about.title">Quiénes somos</h2>
+            <p class="lead" data-i18n="about.lead">En ClientIA unimos dos mundos que suelen estar separados: la profundidad analítica de una consultora y la agilidad de una agencia de marketing y tecnología.</p>
+            <p data-i18n="about.text">No creemos en la intuición ni en fórmulas genéricas. Entendemos la realidad de cada empresa y combinamos estrategias de marketing con inteligencia artificial para convertir datos en decisiones rentables.</p>
+            <div class="mv">
+              <div class="mv__box">
+                <h3 data-i18n="mission.title">Misión</h3>
+                <p data-i18n="mission.text">Acompañar a las empresas a tomar decisiones comerciales inteligentes y respaldadas por datos reales, combinando el rigor de las ciencias económicas, las estrategias de marketing y el poder de la inteligencia artificial.</p>
+              </div>
+              <div class="mv__box">
+                <h3 data-i18n="vision.title">Visión</h3>
+                <p data-i18n="vision.text">Ser la consultora y agencia de referencia en inteligencia comercial, creciendo desde Misiones hacia el resto del país.</p>
+              </div>
+            </div>
+          </div>
+          <div class="about__logo reveal">
+            <img src="assets/logo-claro.webp" alt="Logo de ClientIA, consultora y agencia de inteligencia comercial" data-i18n-attr="alt:about.logoAlt" width="817" height="900" loading="lazy">
+          </div>
+        </div>
+
+        <div class="team">
+          <header class="section__head reveal">
+            <h3 class="h3-lg" data-i18n="team.title">Nuestro equipo</h3>
+            <p class="sub" data-i18n="team.sub">Cuatro perfiles complementarios para que tu empresa tenga estrategia, método, análisis y tecnología en un mismo lugar.</p>
+          </header>
+          <div class="grid grid--4">
+            <article class="card card--team reveal">
+              <span class="icon-badge"><svg class="i" aria-hidden="true"><use href="#i-megaphone"/></svg></span>
+              <h4 data-i18n="team.1.t">Especialista en Marketing Estratégico</h4>
+              <p data-i18n="team.1.d">Diseña la estrategia de marketing y de campañas.</p>
+            </article>
+            <article class="card card--team reveal">
+              <span class="icon-badge"><svg class="i" aria-hidden="true"><use href="#i-code"/></svg></span>
+              <h4 data-i18n="team.2.t">Programador</h4>
+              <p data-i18n="team.2.d">Desarrolla los agentes de inteligencia artificial y las herramientas tecnológicas.</p>
+            </article>
+            <article class="card card--team reveal">
+              <span class="icon-badge"><svg class="i" aria-hidden="true"><use href="#i-chart"/></svg></span>
+              <h4 data-i18n="team.3.t">Profesora en Ciencias Económicas</h4>
+              <p data-i18n="team.3.d">Aporta el rigor metodológico y el análisis económico.</p>
+            </article>
+            <article class="card card--team reveal">
+              <span class="icon-badge"><svg class="i" aria-hidden="true"><use href="#i-briefcase"/></svg></span>
+              <h4 data-i18n="team.4.t">Licenciado en Administración de Empresas</h4>
+              <p data-i18n="team.4.d">Aporta la mirada de gestión del negocio.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SERVICIOS ============ -->
+    <section class="section dark" id="servicios">
+      <div class="container">
+        <header class="section__head center reveal">
+          <h2 data-i18n="svc.title">Servicios</h2>
+          <p class="sub" data-i18n="svc.sub">De la pregunta correcta a la acción.</p>
+        </header>
+
+        <div class="grid grid--services">
+          <article class="service reveal">
+            <div class="service__head">
+              <span class="icon-badge icon-badge--dark"><svg class="i" aria-hidden="true"><use href="#i-search"/></svg></span>
+              <div>
+                <span class="phase" data-i18n="svc.phase1">Fase 1</span>
+                <h3 data-i18n="svc.1.t">Diagnóstico</h3>
+              </div>
+            </div>
+            <ul class="service__list">
+              <li data-i18n="svc.1.a"><strong>Mapa del Cliente</strong><em>¿Por qué se van o no se animan a comprar?</em> Estudio del cliente, puntos de fricción y contenido clave, con recomendaciones concretas.</li>
+              <li data-i18n="svc.1.b"><strong>Radar de Mercado</strong><em>¿Quiénes son mis clientes y qué quieren?</em> Estudio de mercado, segmentación y tendencias del sector.</li>
+              <li data-i18n="svc.1.c"><strong>Chequeo de Ventas</strong><em>¿Dónde estoy perdiendo ventas?</em> Análisis de tu proceso comercial, comparado con los estándares del mercado.</li>
+            </ul>
+          </article>
+
+          <article class="service reveal">
+            <div class="service__head">
+              <span class="icon-badge icon-badge--dark"><svg class="i" aria-hidden="true"><use href="#i-spark"/></svg></span>
+              <div>
+                <span class="phase" data-i18n="svc.phase2">Fase 2</span>
+                <h3 data-i18n="svc.2.t">Inteligencia continua con <span class="accent">IA</span></h3>
+              </div>
+            </div>
+            <ul class="service__list">
+              <li data-i18n="svc.2.a"><strong>Inteligencia en Vivo</strong>Monitoreo de la satisfacción y de las opiniones en tiempo real, con alertas y reportes automáticos.</li>
+              <li data-i18n="svc.2.b"><strong>Prospección con IA</strong>Un agente virtual que contacta a potenciales clientes, detecta interés real y agenda reuniones con tu equipo.</li>
+            </ul>
+          </article>
+
+          <article class="service reveal">
+            <div class="service__head">
+              <span class="icon-badge icon-badge--dark"><svg class="i" aria-hidden="true"><use href="#i-megaphone"/></svg></span>
+              <div>
+                <span class="phase" data-i18n="svc.phase3">Fase 3</span>
+                <h3 data-i18n="svc.3.t">Estrategia de marketing y campañas</h3>
+              </div>
+            </div>
+            <ul class="service__list">
+              <li data-i18n="svc.3.a"><strong>Estrategia y campañas</strong>Estrategia de marketing y publicidad en Meta, Google y TikTok, con contenido, seguimiento y reportes de resultados. La gestión de campañas es opcional y a pedido.</li>
+            </ul>
+          </article>
+
+          <article class="service reveal">
+            <div class="service__head">
+              <span class="icon-badge icon-badge--dark"><svg class="i" aria-hidden="true"><use href="#i-cap"/></svg></span>
+              <div>
+                <span class="phase" data-i18n="svc.phase4">Fase 4</span>
+                <h3 data-i18n="svc.4.t">Capacitación</h3>
+              </div>
+            </div>
+            <ul class="service__list">
+              <li data-i18n="svc.4.a"><strong>Workshops para empresas</strong>Capacitamos a tu equipo en inteligencia artificial y estrategias de marketing aplicadas a la inteligencia comercial: conocer a tus clientes, entender tu mercado y mejorar tus ventas con datos reales. Talleres prácticos, pensados para la realidad de cada empresa.</li>
+              <!-- [Completar: temas, duración y modalidad (presencial o virtual)] -->
+            </ul>
+          </article>
+        </div>
+
+        <div class="center mt-lg reveal">
+          <a href="#contacto" class="btn btn--primary" data-track="cta_servicios" data-i18n="cta.main">Quiero mi diagnóstico inicial</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CÓMO TRABAJAMOS ============ -->
+    <section class="section" id="como-trabajamos">
+      <div class="container">
+        <header class="section__head center reveal">
+          <p class="eyebrow eyebrow--dark" data-i18n="proc.eyebrow">Proceso</p>
+          <h2 data-i18n="proc.title">Cómo trabajamos</h2>
+          <p class="sub" data-i18n="proc.sub">Así convertimos datos en resultados.</p>
+        </header>
+
+        <ol class="timeline">
+          <li class="step reveal"><span class="step__n">1</span><div><h3 data-i18n="step.1.t">Te escuchamos.</h3><p data-i18n="step.1.d">Conocemos tu negocio, tus objetivos y tus dudas.</p></div></li>
+          <li class="step reveal"><span class="step__n">2</span><div><h3 data-i18n="step.2.t">Diseñamos tu diagnóstico a medida.</h3><p data-i18n="step.2.d">Definimos las preguntas y los indicadores clave.</p></div></li>
+          <li class="step reveal"><span class="step__n">3</span><div><h3 data-i18n="step.3.t">Investigamos con rigor profesional.</h3><p data-i18n="step.3.d">Aplicamos metodología, no intuición.</p></div></li>
+          <li class="step reveal"><span class="step__n">4</span><div><h3 data-i18n="step.4.t">Analizamos los datos.</h3><p data-i18n="step.4.d">Cruzamos información para detectar patrones.</p></div></li>
+          <li class="step reveal"><span class="step__n">5</span><div><h3 data-i18n="step.5.t">Te entregamos un diagnóstico claro.</h3><p data-i18n="step.5.d">Con conclusiones y recomendaciones accionables.</p></div></li>
+          <li class="step reveal"><span class="step__n">6</span><div><h3 data-i18n="step.6.t">Seguimos con vos.</h3><p data-i18n="step.6.d">Si lo necesitás, te acompañamos a implementar la estrategia.</p></div></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ POR QUÉ ELEGIRNOS ============ -->
+    <section class="section soft" id="por-que-elegirnos">
+      <div class="container">
+        <header class="section__head center reveal">
+          <p class="eyebrow eyebrow--dark" data-i18n="why.eyebrow">Nuestros valores</p>
+          <h2 data-i18n="why.title">Por qué elegirnos</h2>
+          <p class="sub" data-i18n="why.sub">Una mirada rigurosa, aplicada a tu realidad.</p>
+        </header>
+        <div class="grid grid--3">
+          <article class="card card--value reveal">
+            <span class="icon-badge"><svg class="i" aria-hidden="true"><use href="#i-ruler"/></svg></span>
+            <h3 data-i18n="why.1.t">Rigor profesional</h3><p data-i18n="why.1.d">Metodología, no intuición.</p>
+          </article>
+          <article class="card card--value reveal">
+            <span class="icon-badge"><svg class="i" aria-hidden="true"><use href="#i-chart"/></svg></span>
+            <h3 data-i18n="why.2.t">Decisiones basadas en datos</h3><p data-i18n="why.2.d">Evidencia, no corazonadas.</p>
+          </article>
+          <article class="card card--value reveal">
+            <span class="icon-badge"><svg class="i" aria-hidden="true"><use href="#i-spark"/></svg></span>
+            <h3 data-i18n="why.3.t">Innovación aplicada</h3><p data-i18n="why.3.d">La IA como herramienta útil, no como moda.</p>
+          </article>
+          <article class="card card--value reveal">
+            <span class="icon-badge"><svg class="i" aria-hidden="true"><use href="#i-handshake"/></svg></span>
+            <h3 data-i18n="why.4.t">Cercanía</h3><p data-i18n="why.4.d">Soluciones a la altura de tu empresa.</p>
+          </article>
+          <article class="card card--value reveal">
+            <span class="icon-badge"><svg class="i" aria-hidden="true"><use href="#i-route"/></svg></span>
+            <h3 data-i18n="why.5.t">Acompañamiento continuo</h3><p data-i18n="why.5.d">Te guiamos antes, durante y después del diagnóstico.</p>
+          </article>
+          <article class="card card--value reveal">
+            <span class="icon-badge"><svg class="i" aria-hidden="true"><use href="#i-eye"/></svg></span>
+            <h3 data-i18n="why.6.t">Transparencia</h3><p data-i18n="why.6.d">Te mostramos la realidad de los datos, con honestidad.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PARA QUIÉN ============ -->
+    <section class="section">
+      <div class="container">
+        <header class="section__head center reveal">
+          <h2 data-i18n="aud.title">¿Para quién trabajamos?</h2>
+        </header>
+        <ul class="audience reveal">
+          <li><svg class="i" aria-hidden="true"><use href="#i-store"/></svg> <span data-i18n="aud.1">Pymes y comercios</span></li>
+          <li><svg class="i" aria-hidden="true"><use href="#i-briefcase"/></svg> <span data-i18n="aud.2">Empresas de servicios</span></li>
+          <li><svg class="i" aria-hidden="true"><use href="#i-rocket"/></svg> <span data-i18n="aud.3">Emprendedores en crecimiento</span></li>
+          <li><svg class="i" aria-hidden="true"><use href="#i-building"/></svg> <span data-i18n="aud.4">Instituciones</span></li>
+          <li><svg class="i" aria-hidden="true"><use href="#i-cap"/></svg> <span data-i18n="aud.5">Equipos que quieren capacitarse en inteligencia comercial, con IA y marketing aplicados a su negocio</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ PRUEBA SOCIAL ============
+         [Completar] Agregar aquí casos, testimonios o un ejemplo de informe cuando estén disponibles.
+         No se publican testimonios inventados. -->
+
+    <!-- ============ PREGUNTAS FRECUENTES ============ -->
+    <section class="section soft" id="faq">
+      <div class="container container--narrow">
+        <header class="section__head center reveal">
+          <h2 data-i18n="faq.title">Preguntas frecuentes</h2>
+        </header>
+        <div class="faq reveal">
+          <details>
+            <summary data-i18n="faq.1.q">¿Qué incluye el diagnóstico inicial?</summary>
+            <p data-i18n="faq.1.a">[Completar] Una primera charla para entender tu negocio y una propuesta con las preguntas a investigar, la metodología y los entregables.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.2.q">¿Cuánto dura?</summary>
+            <p data-i18n="faq.2.a">[Completar] Depende del alcance; te lo confirmamos en la primera reunión.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.3.q">¿Tiene costo?</summary>
+            <p data-i18n="faq.3.a">[Completar]</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.4.q">¿Necesito tener muchos clientes para hacerlo?</summary>
+            <p data-i18n="faq.4.a">[Completar] No. Adaptamos el método al tamaño y a la realidad de tu empresa.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.5.q">¿Trabajan con empresas de otras provincias?</summary>
+            <p data-i18n="faq.5.a">[Completar] Sí. Estamos en Misiones y trabajamos también de forma virtual con empresas de todo el país.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.6.q">¿Qué hace la inteligencia artificial y qué hacen las personas?</summary>
+            <p data-i18n="faq.6.a">[Completar] La IA nos ayuda a procesar y monitorear grandes volúmenes de información; el análisis, las conclusiones y las recomendaciones las hace nuestro equipo.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.7.q">¿Dan capacitaciones o workshops para mi equipo?</summary>
+            <p data-i18n="faq.7.a">[Completar] Sí. Ofrecemos workshops prácticos en inteligencia comercial, IA y marketing, pensados para la realidad de cada empresa.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CIERRE / CONTACTO ============ -->
+    <section class="section dark" id="contacto">
+      <div class="hero__glow hero__glow--b" aria-hidden="true"></div>
+      <div class="container contact">
+        <div class="contact__copy reveal">
+          <h2 data-i18n="contact.title">¿Listo para entender a tus clientes <span class="accent">de verdad?</span></h2>
+          <p class="sub" data-i18n="contact.sub">Escribinos hoy y empecemos a construir tu crecimiento sobre datos reales.</p>
+          <a href="#" class="btn btn--ghost js-wa" data-track="whatsapp_cierre">
+            <svg class="i" aria-hidden="true"><use href="#i-whatsapp"/></svg> <span data-i18n="cta.wa">Hablar por WhatsApp</span>
+          </a>
+        </div>
+
+        <form class="form reveal" id="form" novalidate>
+          <div class="form__grid">
+            <div class="field">
+              <label for="f-nombre" data-i18n="form.name">Nombre y apellido</label>
+              <input id="f-nombre" name="nombre" type="text" autocomplete="name" required>
+              <span class="field__err" aria-live="polite"></span>
+            </div>
+            <div class="field">
+              <label for="f-empresa" data-i18n="form.company">Empresa</label>
+              <input id="f-empresa" name="empresa" type="text" autocomplete="organization" required>
+              <span class="field__err" aria-live="polite"></span>
+            </div>
+            <div class="field">
+              <label for="f-rubro" data-i18n="form.industry">Rubro</label>
+              <input id="f-rubro" name="rubro" type="text" required>
+              <span class="field__err" aria-live="polite"></span>
+            </div>
+            <div class="field">
+              <label for="f-email" data-i18n="form.email">Email</label>
+              <input id="f-email" name="email" type="email" autocomplete="email" required>
+              <span class="field__err" aria-live="polite"></span>
+            </div>
+            <div class="field field--full">
+              <label for="f-tel" data-i18n="form.phone">Teléfono</label>
+              <input id="f-tel" name="telefono" type="tel" autocomplete="tel" inputmode="tel" required>
+              <span class="field__err" aria-live="polite"></span>
+            </div>
+            <div class="field field--full">
+              <label for="f-msg" data-i18n="form.msg">Contanos qué querés mejorar <span class="opt">(opcional)</span></label>
+              <textarea id="f-msg" name="mensaje" rows="4"></textarea>
+            </div>
+          </div>
+          <label class="check">
+            <input type="checkbox" name="privacidad" id="f-priv" required>
+            <span data-i18n="form.privacy">Acepto la <button type="button" class="link js-privacy">política de privacidad</button> y el uso de mis datos para que me contacten.</span>
+          </label>
+          <span class="field__err" id="err-priv" aria-live="polite"></span>
+          <button type="submit" class="btn btn--primary btn--block" data-i18n="form.submit">Quiero mi diagnóstico</button>
+          <div class="form__ok" id="form-ok" role="status" hidden>
+            <svg class="i i--lg" aria-hidden="true"><use href="#i-check"/></svg>
+            <div><strong data-i18n="form.ok.t">¡Gracias! Recibimos tu consulta.</strong><p data-i18n="form.ok.d">Te vamos a escribir a la brevedad para coordinar tu diagnóstico inicial.</p></div>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <img src="assets/logo-horizontal.webp" alt="ClientIA" width="1551" height="419" loading="lazy">
+        <p data-i18n="footer.tagline">Consultora y agencia de inteligencia comercial.</p>
+      </div>
+      <nav class="footer__col" aria-label="Secciones" data-i18n-attr="aria-label:footer.sections">
+        <h2 data-i18n="footer.sections">Secciones</h2>
+        <a href="#quienes-somos" data-i18n="nav.about">Quiénes somos</a>
+        <a href="#servicios" data-i18n="nav.services">Servicios</a>
+        <a href="#como-trabajamos" data-i18n="nav.process">Cómo trabajamos</a>
+        <a href="#por-que-elegirnos" data-i18n="nav.why">Por qué elegirnos</a>
+        <a href="#faq" data-i18n="faq.title">Preguntas frecuentes</a>
+      </nav>
+      <div class="footer__col">
+        <h2 data-i18n="footer.contact">Contacto</h2>
+        <a href="#" class="js-wa" data-track="whatsapp_footer">WhatsApp</a>
+        <a href="mailto:contacto@clientia.com.ar" class="js-mail">contacto@clientia.com.ar</a>
+        <span>Misiones, Argentina</span>
+        <div class="social">
+          <a href="#" aria-label="Instagram"><svg class="i" aria-hidden="true"><use href="#i-instagram"/></svg></a>
+          <a href="#" aria-label="LinkedIn"><svg class="i" aria-hidden="true"><use href="#i-linkedin"/></svg></a>
+          <a href="#" aria-label="Facebook"><svg class="i" aria-hidden="true"><use href="#i-facebook"/></svg></a>
+        </div>
+      </div>
+    </div>
+    <div class="container footer__bottom">
+      <span>© <span id="year"></span> ClientIA. <span data-i18n="footer.rights">Todos los derechos reservados.</span></span>
+      <button type="button" class="link js-privacy" data-i18n="footer.privacy">Política de privacidad</button>
+    </div>
+  </footer>
+
+  <!-- WhatsApp flotante -->
+  <a href="#" class="wa-float js-wa" aria-label="Hablar por WhatsApp" data-i18n-attr="aria-label:cta.wa" data-track="whatsapp_flotante">
+    <svg aria-hidden="true"><use href="#i-whatsapp"/></svg>
+  </a>
+
+  <!-- Política de privacidad -->
+  <dialog class="modal" id="privacy">
+    <div class="modal__body">
+      <h2 data-i18n="privacy.title">Política de privacidad</h2>
+      <p>[Completar con el texto legal definitivo.]</p>
+      <p data-i18n="privacy.text">Los datos que nos envíes a través del formulario (nombre, empresa, rubro, email, teléfono y mensaje) se usan únicamente para responder tu consulta y coordinar el diagnóstico inicial. No los compartimos con terceros ni los usamos con otros fines sin tu consentimiento. Podés pedir que los modifiquemos o eliminemos en cualquier momento escribiéndonos.</p>
+      <form method="dialog"><button class="btn btn--primary" data-i18n="privacy.ok">Entendido</button></form>
+    </div>
+  </dialog>
+
+  <!-- Íconos (lineales) -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="i-question" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.6.3-1 .9-1 1.6v.6M12 17h.01"/></symbol>
+      <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></symbol>
+      <symbol id="i-compass" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m15.5 8.5-2 5-5 2 2-5z"/></symbol>
+      <symbol id="i-megaphone" viewBox="0 0 24 24"><path d="M3 11v2a1 1 0 0 0 1 1h2l5 4V6L6 10H4a1 1 0 0 0-1 1zM15 9a3 3 0 0 1 0 6M18 6a7 7 0 0 1 0 12"/></symbol>
+      <symbol id="i-code" viewBox="0 0 24 24"><path d="m8 8-4 4 4 4M16 8l4 4-4 4M13.5 5l-3 14"/></symbol>
+      <symbol id="i-chart" viewBox="0 0 24 24"><path d="M4 20h16M7 16v-4M12 16V8M17 16v-7"/></symbol>
+      <symbol id="i-briefcase" viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2M3 13h18"/></symbol>
+      <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="m20 20-4.2-4.2"/></symbol>
+      <symbol id="i-spark" viewBox="0 0 24 24"><path d="M12 3v3M12 18v3M3 12h3M18 12h3M12 8l1.4 2.6L16 12l-2.6 1.4L12 16l-1.4-2.6L8 12l2.6-1.4z"/></symbol>
+      <symbol id="i-cap" viewBox="0 0 24 24"><path d="m2 9 10-5 10 5-10 5zM6 11v5c0 1.5 2.7 3 6 3s6-1.5 6-3v-5M22 9v6"/></symbol>
+      <symbol id="i-ruler" viewBox="0 0 24 24"><path d="M3 17 17 3l4 4L7 21zM7 13l2 2M10 10l2 2M13 7l2 2"/></symbol>
+      <symbol id="i-handshake" viewBox="0 0 24 24"><path d="m11 17 2 2a1.5 1.5 0 0 0 2-2M14 14l2.5 2.5a1.5 1.5 0 0 0 2-2L15 11M3 8l4-3 5 2 2-1 7 3-3 7M3 8v6l5 5a1.5 1.5 0 0 0 2-2M12 7l-3 3a1.5 1.5 0 0 0 2 2l3-2"/></symbol>
+      <symbol id="i-route" viewBox="0 0 24 24"><circle cx="6" cy="19" r="2"/><circle cx="18" cy="5" r="2"/><path d="M8 19h8.5a3.5 3.5 0 0 0 0-7h-9a3.5 3.5 0 0 1 0-7H16"/></symbol>
+      <symbol id="i-eye" viewBox="0 0 24 24"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></symbol>
+      <symbol id="i-store" viewBox="0 0 24 24"><path d="M4 10v10h16V10M3 6l1.5-3h15L21 6v2a3 3 0 0 1-6 0 3 3 0 0 1-6 0 3 3 0 0 1-6 0zM10 20v-5h4v5"/></symbol>
+      <symbol id="i-rocket" viewBox="0 0 24 24"><path d="M5 15c-1.5 1.5-2 5-2 5s3.5-.5 5-2M9 13l2 2M14 4c3-1 6-1 6-1s0 3-1 6l-6 7-5-5zM15 9h.01"/></symbol>
+      <symbol id="i-building" viewBox="0 0 24 24"><path d="M3 21h18M5 21V8l7-5 7 5v13M9 21v-6h6v6M9 11h.01M15 11h.01"/></symbol>
+      <symbol id="i-check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></symbol>
+      <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.5 3.8 5.5 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.5-3.8-9S9.5 5.5 12 3z"/></symbol>
+      <symbol id="i-chevron" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+      <symbol id="i-whatsapp" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4c1.7.7 2.3.8 3.2.7a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.2-.2-.4-.3z"/></symbol>
+      <symbol id="i-instagram" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></symbol>
+      <symbol id="i-linkedin" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 10v7M8 7h.01M12 17v-4a2 2 0 0 1 4 0v4M12 10v7"/></symbol>
+      <symbol id="i-facebook" viewBox="0 0 24 24"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v3H7v4h3v7h4v-7h3l1-4h-4V8z"/></symbol>
+    </defs>
+  </svg>
+
+  <script src="i18n.js" defer></script>
+  <script src="script.js" defer></script>
+</body>
+</html>

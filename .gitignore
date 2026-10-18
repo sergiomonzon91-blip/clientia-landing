@@ -1,0 +1,4 @@
+# Material interno y originales: no se publican
+*.docx
+~$*
+/*.png
